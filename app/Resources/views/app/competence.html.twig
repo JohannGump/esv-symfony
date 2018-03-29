@@ -1,0 +1,24 @@
+{% block body %}
+    Ceci est la page de création pour une compétence
+
+    {#{{ form(formArticle) }}#}
+
+
+    {{ form_start(formCompetence, {'attr': {'class': 'form-horizontal clsswesh'}}) }}
+    {# les erreurs liées au formulaire #}
+    <div style="color:red;">
+        {{ form_errors(formCompetence) }}
+    </div>
+
+    {{ form_widget(formCompetence.type) }}
+    {{ form_label(formCompetence.type) }}
+
+    {# les erreurs liées à un champ en particulier #}
+    <div style="color:red;">
+        {{ form_errors(formCompetence.type) }}
+    </div>
+
+    {{ form_end(formCompetence) }}
+
+
+{% endblock %}
